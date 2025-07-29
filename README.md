@@ -138,7 +138,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 👨‍💻 Author
 
 **Salahuddin**
-- GitHub: [@salahuddin](https://github.com/salahuddin)
+- GitHub: [@Salahuddin-buttn](https://github.com/Salahuddin-Butt)
 
 ## 🙏 Acknowledgments
 
