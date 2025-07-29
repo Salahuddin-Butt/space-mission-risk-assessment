@@ -37,6 +37,20 @@ global.assessments = [];
 const aiService = require('./services/aiService');
 console.log('In-memory storage and AI models initialized');
 
+// Health check endpoint
+app.get('/api/health', (req, res) => {
+  res.json({ 
+    status: 'healthy', 
+    timestamp: new Date().toISOString(),
+    services: {
+      passengers: global.passengers.length,
+      missions: global.missions.length,
+      risks: global.risks.length,
+      assessments: global.assessments.length
+    }
+  });
+});
+
 // Routes
 app.use('/api/passengers', passengersRoutes);
 app.use('/api/missions', missionsRoutes);

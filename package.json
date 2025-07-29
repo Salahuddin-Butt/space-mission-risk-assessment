@@ -2,7 +2,7 @@
   "name": "mission-risk-assessment",
   "version": "1.0.0",
   "description": "AI-powered mission risk assessment system",
-  "homepage": "https://salahuddin.github.io/space-mission-risk-assessment",
+  "homepage": ".",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
