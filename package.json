@@ -1,0 +1,40 @@
+{
+  "name": "mission-risk-assessment",
+  "version": "1.0.0",
+  "description": "AI-powered mission risk assessment system",
+  "homepage": "https://salahuddin.github.io/space-mission-risk-assessment",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "nodemon server.js",
+    "client": "cd client && npm start",
+    "build": "cd client && npm run build",
+    "install-client": "cd client && npm install",
+    "heroku-postbuild": "npm run install-client && npm run build",
+    "deploy": "npm run build && gh-pages -d client/build"
+  },
+  "keywords": [
+    "space",
+    "mission",
+    "risk",
+    "assessment",
+    "ai",
+    "react",
+    "node"
+  ],
+  "author": "Salahuddin",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "genetic-js": "^0.1.14",
+    "nodemon": "^3.0.1",
+    "socket.io": "^4.7.2",
+    "synaptic": "^1.1.4"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0",
+    "gh-pages": "^6.3.0"
+  }
+}
