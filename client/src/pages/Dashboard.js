@@ -8,7 +8,9 @@ import {
   Brain,
   Activity,
   Target,
-  Clock
+  Clock,
+  Crown,
+  ExternalLink
 } from 'lucide-react';
 import { 
   BarChart, 
@@ -214,6 +216,18 @@ const Dashboard = () => {
         </div>
         
         <div className="flex space-x-2">
+          {/* Premium Version Button */}
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={() => window.open('https://funny-lokum-6c31de.netlify.app/', '_blank')}
+            className="flex items-center space-x-2 bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl border-2 border-yellow-300/30"
+          >
+            <Crown className="w-5 h-5" />
+            <span>Premium Version</span>
+            <ExternalLink className="w-4 h-4" />
+          </motion.button>
+
           <button
             onClick={() => {
               // Refresh dashboard data

@@ -41,10 +41,25 @@ function App() {
   // Show loading spinner while checking backend
   if (isLoading) {
     return (
-      <div className="flex h-screen items-center justify-center bg-gray-50">
+      <div 
+        className="flex h-screen items-center justify-center"
+        style={{
+          backgroundImage: 'url(/space-background.png)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center center',
+          backgroundAttachment: 'fixed',
+          backgroundRepeat: 'no-repeat',
+          minHeight: '100vh',
+          width: '100vw',
+          position: 'fixed',
+          top: 0,
+          left: 0
+        }}
+      >
         <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
-          <p className="text-gray-600">Loading Space Mission Risk Assessment...</p>
+          <div className="loading-spinner mx-auto mb-6"></div>
+          <h1 className="text-3xl font-bold text-white mb-4 glow-text">Mission Risk Assessment</h1>
+          <p className="text-xl text-blue-200 font-semibold">Loading Space Mission System...</p>
         </div>
       </div>
     );
@@ -58,7 +73,21 @@ function App() {
   // Show full app if backend is available
   return (
     <SocketProvider>
-      <div className="flex h-screen bg-gray-50">
+      <div 
+        className="flex h-screen"
+        style={{
+          backgroundImage: 'url(/space-background.png)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center center',
+          backgroundAttachment: 'fixed',
+          backgroundRepeat: 'no-repeat',
+          minHeight: '100vh',
+          width: '100vw',
+          position: 'fixed',
+          top: 0,
+          left: 0
+        }}
+      >
         <Sidebar />
         <main className="flex-1 overflow-auto">
           <motion.div

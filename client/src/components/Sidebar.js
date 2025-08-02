@@ -28,29 +28,29 @@ const Sidebar = () => {
       initial={{ x: -250 }}
       animate={{ x: 0 }}
       transition={{ duration: 0.3 }}
-      className="w-64 bg-white shadow-lg border-r border-gray-200"
+      className="w-64 bg-white/15 shadow-2xl border-r-2 border-white/20"
     >
       <div className="p-6">
         <div className="flex items-center space-x-3 mb-8">
-          <div className="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center">
-            <Rocket className="w-6 h-6 text-white" />
+          <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center shadow-lg pulse-glow">
+            <Rocket className="w-7 h-7 text-white" />
           </div>
           <div>
-            <h1 className="text-xl font-bold text-gray-900">Mission Risk</h1>
-            <p className="text-sm text-gray-500">Assessment System</p>
+            <h1 className="text-xl font-bold text-white glow-text">Mission Risk</h1>
+            <p className="text-sm text-blue-200 font-semibold">Assessment System</p>
           </div>
         </div>
 
         {/* Connection Status */}
-        <div className="mb-6 p-3 bg-gray-50 rounded-lg">
-          <div className="flex items-center space-x-2">
+        <div className="mb-6 p-4 bg-gradient-to-r from-blue-500/20 to-purple-600/20 rounded-xl border-2 border-blue-400/30">
+          <div className="flex items-center space-x-3">
             {isConnected ? (
-              <Wifi className="w-4 h-4 text-green-500" />
+              <Wifi className="w-5 h-5 text-green-400" />
             ) : (
-              <WifiOff className="w-4 h-4 text-red-500" />
+              <WifiOff className="w-5 h-5 text-red-400" />
             )}
-            <span className={`text-sm font-medium ${
-              isConnected ? 'text-green-600' : 'text-red-600'
+            <span className={`text-sm font-bold ${
+              isConnected ? 'text-green-400' : 'text-red-400'
             }`}>
               {isConnected ? 'Connected' : 'Disconnected'}
             </span>
@@ -58,7 +58,7 @@ const Sidebar = () => {
         </div>
 
         {/* Navigation */}
-        <nav className="space-y-2">
+        <nav className="space-y-3">
           {navItems.map((item) => {
             const Icon = item.icon;
             return (
@@ -66,15 +66,11 @@ const Sidebar = () => {
                 key={item.path}
                 to={item.path}
                 className={({ isActive }) =>
-                  `flex items-center space-x-3 px-4 py-3 rounded-lg transition-colors duration-200 ${
-                    isActive
-                      ? 'bg-primary-50 text-primary-700 border-r-2 border-primary-600'
-                      : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
-                  }`
+                  `nav-link ${isActive ? 'active' : ''}`
                 }
               >
-                <Icon className="w-5 h-5" />
-                <span className="font-medium">{item.label}</span>
+                <Icon className="w-6 h-6" />
+                <span>{item.label}</span>
               </NavLink>
             );
           })}
@@ -82,12 +78,12 @@ const Sidebar = () => {
       </div>
 
       {/* Footer */}
-      <div className="absolute bottom-0 w-full p-4 border-t border-gray-200">
+      <div className="absolute bottom-0 w-full p-4 border-t-2 border-white/20 bg-gradient-to-r from-blue-500/10 to-purple-600/10">
         <div className="text-center">
-          <p className="text-xs text-gray-500">
+          <p className="text-xs text-blue-200 font-semibold">
             AI-Powered Risk Assessment
           </p>
-          <p className="text-xs text-gray-400 mt-1">
+          <p className="text-xs text-blue-300 mt-1 font-medium">
             Version 1.0.0
           </p>
         </div>
