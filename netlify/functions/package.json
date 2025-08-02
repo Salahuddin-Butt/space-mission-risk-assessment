@@ -1,0 +1,25 @@
+{
+  "name": "mission-risk-assessment-netlify-functions",
+  "version": "1.0.0",
+  "description": "Netlify serverless functions for Mission Risk Assessment API",
+  "main": "api.js",
+  "dependencies": {
+    "express": "^4.18.2",
+    "serverless-http": "^3.2.0",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "netlify",
+    "serverless",
+    "api",
+    "mission",
+    "risk",
+    "assessment"
+  ],
+  "author": "Salahuddin",
+  "license": "MIT"
+} 
