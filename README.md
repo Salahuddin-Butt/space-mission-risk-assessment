@@ -104,34 +104,6 @@ space-mission-risk-assessment/
 └── deploy.sh              # Deployment script
 ```
 
-## 🌐 Deployment Options
-
-### 1. Netlify (Recommended)
-- ✅ Free hosting
-- ✅ Automatic deployments
-- ✅ Serverless functions
-- ✅ Custom domain support
-
-### 2. Vercel
-- ✅ Free hosting
-- ✅ Automatic deployments
-- ✅ Edge functions
-- ✅ Global CDN
-
-### 3. Docker
-```bash
-# Build and run with Docker
-docker-compose up -d
-```
-
-### 4. Manual Server
-```bash
-# Run deployment script
-./deploy.sh
-
-# Start production server
-npm start
-```
 
 ## 🎨 Customization
 
@@ -189,19 +161,12 @@ In your Netlify dashboard, you can set:
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 - Space background image
 - React and Node.js communities
 - Netlify for hosting
 - All contributors and supporters
-
-## 📞 Support
-
-If you have any questions or need help:
-- Create an issue on GitHub
-- Contact: [Your Email]
-- Documentation: [Your Docs URL]
 
 ---
 
